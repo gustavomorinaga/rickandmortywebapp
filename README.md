@@ -2,11 +2,7 @@
 
 - [x] Criar projeto em React
 - [x] Limpar arquivos desnecessários
-- [ ] Instalar todas as dependências do projeto
-    - [x] Express
-    - [ ] React Router Dom
-    - [ ] Material-UI
-- [ ] Criar o projeto
+- [x] Instalar Axios para consumo da API
 - [ ] Visualização dos personagens
 - [ ] Ver detalhes dos personagens ao clicar
 - [ ] Localização de cada personagem
