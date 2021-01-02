@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Rajdhani:wght@400;700&display=swap');
+
 :root {
   --color-background: #1a1b1a;
   --color-primary: #e31837;

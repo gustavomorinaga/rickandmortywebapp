@@ -3,7 +3,7 @@
 - [x] Criar projeto em React
 - [x] Limpar arquivos desnecessários
 - [x] Instalar Axios para consumo da API
-- [ ] Visualização dos personagens
+- [x] Visualização dos personagens
 - [ ] Ver detalhes dos personagens ao clicar
 - [ ] Localização de cada personagem
 - [ ] Gráfico de personagens por localização

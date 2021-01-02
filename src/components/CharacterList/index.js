@@ -5,7 +5,7 @@ import CharacterCards from './CharacterCards';
 import './index.css';
 
 function CharacterList() {
-  const [ CharacterList, setCharacterList ] = useState([]);
+  const [CharacterList, setCharacterList] = useState([]);
 
   useEffect(() => {
     api.get('/character')
@@ -17,14 +17,18 @@ function CharacterList() {
       });
   });
 
-  return(
+  return (
     <section className="character-list">
-      {CharacterList.map((chars, id) => {
+      <h2>Characters</h2>
+      <p className="subtitle">Select the character for more details!</p>
+      <span>
+        {CharacterList.map((chars, id) => {
           return (
             <CharacterCards key={id} chars={chars} />
           );
         })
-      }
+        }
+      </span>
     </section>
   );
 }
