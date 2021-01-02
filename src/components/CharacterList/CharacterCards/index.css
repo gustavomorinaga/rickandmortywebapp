@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Rajdhani:wght@400;700&display=swap');
+
+.character-card {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  
+  position: relative;
+
+	width: 250px;
+  height: 450px;
+  
+  margin: 0.6rem;
+  
+  overflow: hidden;
+  z-index: 1;
+
+  background:#deeeed;
+  border: 2px solid #6678876b;
+  border-radius: 1.6rem;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+
+  transition: all 0.3s;
+
+  cursor: pointer;
+}
+
+.character-card:hover {
+  transform: scale(1.1);
+  z-index: 2;
+
+  border-color: #abddde;
+  box-shadow: 0px 0px 10px #12b0c9,
+  0px 0px 15px rgba(0, 0, 0, 0.5);
+}
+
+.character-card .character-image-wrapper {
+	flex: 2 1 0%;
+
+	width: 100%;
+}
+
+.character-card .character-content-wrapper {
+  flex: 0 0 0%;
+
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+
+  padding: 0.6rem;
+}
+
+.character-card .character-content-wrapper .character-name {
+  font: 700 3.6rem 'Amatic SC';
+  line-height: 3.6rem;
+  text-align: center;
+
+  margin-bottom: 0.6rem;
+}
+
+.character-card .character-content-wrapper .life-status {
+  display: flex;
+  flex-direction: row;
+
+  width: 100%;
+
+  padding: 1.6rem;
+
+  background: #abddde;
+  border: 2px solid #889887;
+  border-top-left-radius: 0.6rem;
+  border-top-right-radius: 0.6rem;
+  border-bottom-left-radius: 1.6rem;
+  border-bottom-right-radius: 1.6rem;
+
+  position: relative;
+}
+
+.character-card .character-content-wrapper .life-status .life-status-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+
+  width: 100%;
+
+  margin-left: 1.6rem;
+}
+
+.character-card .character-content-wrapper .life-status .life-status-content h4 {
+  width: 100%;
+
+  font: 400 2.6rem "Rajdhani";
+  
+  border-bottom: 1px solid rgb(50, 50, 50);
+}
+
+.character-card .character-content-wrapper .life-status .life-status-content p {
+  font: 700 1.6rem "Rajdhani";
+}
+
+.character-card .character-content-wrapper .life-status .life-status-content .Alive {
+  color: #009B9E;
+}
+
+.character-card .character-content-wrapper .life-status .life-status-content .Dead {
+  color: rgb(150, 0, 0);
+}
+
+.character-card .character-content-wrapper .life-status .life-status-content .unknown {
+  color: rgb(50, 50, 50);
+  text-transform: capitalize;
+}
+
+.character-card .character-image-wrapper .character-image {
+	width: 100%;
+	height: 100%;
+
+	object-fit: cover;
+  object-position: center center;
+}
+
+.character-card .character-content-wrapper .life-status .dots {
+  display: flex;
+
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.character-card .character-content-wrapper .life-status .dots div {
+  width: 10px;
+  height: 10px;
+
+  background: #889887;
+  border-radius: 50%;
+
+  margin: 0 0.3rem 0;
+}

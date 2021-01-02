@@ -3,6 +3,9 @@ header {
   align-items: center;
   justify-content: center;
   flex-direction: row;
+
+  position: absolute;
+  top: 0;
 }
 
 .logo {

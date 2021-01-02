@@ -9,6 +9,9 @@ function Landing() {
   return(
     <main>
       <Header />
+      <section className="banner">
+        
+      </section>
       <CharacterList />
     </main>
   );
