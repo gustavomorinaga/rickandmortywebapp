@@ -25,24 +25,23 @@ function Pagination({ totalPages, paginate, currentPage }) {
   return (
     <nav>
       <ul className="pagination">
-        <SideButtons number={previousPage} paginate={paginate} currentPage={currentPage} totalPages={totalPages}>
-          <ArrowBackIcon />
-        </SideButtons>
+        {previousPage > 0 ?
+          <SideButtons number={previousPage} paginate={paginate} totalPages={totalPages}>
+            <ArrowBackIcon />
+          </SideButtons>
+          : ''
+        }
         {pageNumbers[0] === 1 ? '' : <PaginationButton number={firstPage} currentPage={currentPage} paginate={paginate} />}
         {pageNumbers.map(number => (
-          <li key={number} className="page-number">
-            <button
-              onClick={() => paginate(number)}
-              className={currentPage === number ? 'current-page' : ''}
-            >
-              {number}
-            </button>
-          </li>
+          <PaginationButton key={number} number={number} currentPage={currentPage} paginate={paginate} />
         ))}
         {pageNumbers[pageNumbers.length - 1] === totalPages ? '' : <PaginationButton number={lastPage} currentPage={currentPage} paginate={paginate} />}
-        <SideButtons number={nextPage} paginate={paginate} currentPage={currentPage} totalPages={totalPages}>
-          <ArrowForwardIcon />
-        </SideButtons>
+        {nextPage <= totalPages ?
+          <SideButtons number={nextPage} paginate={paginate} totalPages={totalPages}>
+            <ArrowForwardIcon />
+          </SideButtons>
+          : ''
+        }
       </ul>
     </nav>
   );
