@@ -1,39 +1,39 @@
 .character-card {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  
-  position: relative;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+
+	position: relative;
 
 	width: 250px;
-  height: 450px;
-  
-  margin: 0.6rem;
-  
-  overflow: hidden;
-  z-index: 1;
+	height: 450px;
 
-  background:#deeeed;
-  border: 2px solid #6678876b;
-  border-radius: 1.6rem;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+	margin: 0.6rem;
 
-  transition: all 0.3s;
+	overflow: hidden;
+	z-index: 1;
 
-  cursor: pointer;
+	background: var(--color-white);
+	border: 2px solid var(--color-gray);
+	border-radius: 1.6rem;
+	box-shadow: 0px 0px 10px var(--color-blackMediumOpacity);
 
-  filter: brightness(0.9) grayscale(0.2);
+	transition: all 0.3s;
+
+	cursor: pointer;
+
+	filter: brightness(0.9) grayscale(0.2);
 }
 
 .character-card:hover {
-  transform: scale(1.1);
-  z-index: 2;
+	transform: scale(1.1);
+	z-index: 2;
 
-  border-color: #abddde;
-  box-shadow: 0px 0px 10px #12b0c9,
-  0px 0px 25px rgba(0, 0, 0, 0.5);
+	border-color: var(--color-lightBlue);
+	box-shadow: 0px 0px 10px var(--color-blue),
+		0px 0px 25px var(--color-blackMediumOpacity);
 
-  filter: brightness(1) grayscale(0);
+	filter: brightness(1) grayscale(0);
 }
 
 .character-card .character-image-wrapper {
@@ -43,76 +43,99 @@
 }
 
 .character-card .character-content-wrapper {
-  flex: 0 0 0%;
+	flex: 0 0 0%;
 
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 
-  position: relative;
+	position: relative;
 
-  padding: 0.6rem;
+	padding: 0.6rem;
 }
 
 .character-card .character-content-wrapper .character-name {
-  font: 700 3.6rem 'Amatic SC';
-  line-height: 3.6rem;
-  text-align: center;
+	font: 700 3.6rem 'Amatic SC';
+	color: var(--color-black);
+	line-height: 3rem;
+	text-align: center;
 
-  margin-bottom: 0.6rem;
+	margin-bottom: 0.6rem;
+
+	transition: color 0.3s;
+}
+
+.character-card:hover .character-content-wrapper .character-name {
+	color: var(--color-brown);
 }
 
 .character-card .character-content-wrapper .life-status {
-  display: flex;
-  flex-direction: row;
+	display: flex;
+	flex-direction: row;
 
-  width: 100%;
+	width: 100%;
 
-  padding: 1.6rem;
+	padding: 1.6rem;
 
-  background: #abddde;
-  border: 2px solid #889887;
-  border-top-left-radius: 0.6rem;
-  border-top-right-radius: 0.6rem;
-  border-bottom-left-radius: 1.6rem;
-  border-bottom-right-radius: 1.6rem;
+	background: var(--color-lightBlue);
+	border: 2px solid var(--color-grayMedium);
+	border-top-left-radius: 0.6rem;
+	border-top-right-radius: 0.6rem;
+	border-bottom-left-radius: 1.6rem;
+	border-bottom-right-radius: 1.6rem;
 
-  position: relative;
+	position: relative;
 }
 
 .character-card .character-content-wrapper .life-status .life-status-content {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  flex-direction: column;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: column;
 
-  width: 100%;
+	width: 100%;
 
-  margin-left: 1.6rem;
+	margin-left: 1.6rem;
 }
 
-.character-card .character-content-wrapper .life-status .life-status-content h4 {
-  width: 100%;
+.character-card
+	.character-content-wrapper
+	.life-status
+	.life-status-content
+	h4 {
+	width: 100%;
 
-  font: 400 2.6rem "Rajdhani";
-  
-  border-bottom: 1px solid rgb(50, 50, 50);
+	font: 400 2.6rem 'Rajdhani';
+
+	border-bottom: 1px solid var(--color-grayDark);
 }
 
 .character-card .character-content-wrapper .life-status .life-status-content p {
-  font: 700 1.6rem "Rajdhani";
+	font: 700 1.6rem 'Rajdhani';
 }
 
-.character-card .character-content-wrapper .life-status .life-status-content .Alive {
-  color: #009B9E;
+.character-card
+	.character-content-wrapper
+	.life-status
+	.life-status-content
+	.Alive {
+	color: var(--color-blueAquamarine);
 }
 
-.character-card .character-content-wrapper .life-status .life-status-content .Dead {
-  color: rgb(150, 0, 0);
+.character-card
+	.character-content-wrapper
+	.life-status
+	.life-status-content
+	.Dead {
+	color: var(--color-red);
 }
 
-.character-card .character-content-wrapper .life-status .life-status-content .unknown {
-  color: rgb(50, 50, 50);
-  text-transform: capitalize;
+.character-card
+	.character-content-wrapper
+	.life-status
+	.life-status-content
+	.unknown {
+	color: var(--color-grayDark);
+	text-transform: capitalize;
 }
 
 .character-card .character-image-wrapper .character-image {
@@ -120,23 +143,23 @@
 	height: 100%;
 
 	object-fit: cover;
-  object-position: center center;
+	object-position: center center;
 }
 
 .character-card .character-content-wrapper .life-status .dots {
-  display: flex;
+	display: flex;
 
-  position: absolute;
-  top: 5px;
-  right: 5px;
+	position: absolute;
+	top: 5px;
+	right: 5px;
 }
 
 .character-card .character-content-wrapper .life-status .dots div {
-  width: 10px;
-  height: 10px;
+	width: 10px;
+	height: 10px;
 
-  background: #889887;
-  border-radius: 50%;
+	background: var(--color-grayMedium);
+	border-radius: 50%;
 
-  margin: 0 0.3rem 0;
+	margin: 0 0.3rem 0;
 }

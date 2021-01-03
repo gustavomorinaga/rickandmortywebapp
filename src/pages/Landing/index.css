@@ -14,9 +14,9 @@
 }
 
 .banner img {
-  width: 30%;
-  z-index: 1;
-  filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
+	max-width: 30%;
+	z-index: 1;
+	filter: drop-shadow(0px 0px 5px var(--color-blackMediumOpacity));
 }
 
 .banner::after {
@@ -28,5 +28,9 @@
 	margin: auto;
 	height: 25%;
 	bottom: 0;
-	background: linear-gradient(0deg, #120e00 0%, transparent 100%);
+	background: linear-gradient(
+		0deg,
+		var(--color-grayDarken) 0%,
+		transparent 100%
+	);
 }

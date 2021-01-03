@@ -1,0 +1,9 @@
+nav .pagination .side-button:first-child {
+	margin-right: 1.6rem;
+	border-radius: 1.6rem;
+}
+
+nav .pagination .side-button:last-child {
+	margin-left: 1.6rem;
+	border-radius: 1.6rem;
+}
