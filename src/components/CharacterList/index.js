@@ -28,9 +28,9 @@ function CharacterList() {
   const paginate = pageNumber => setCurrentPage(pageNumber);
 
   return (
-    <section className="character-list">
+    <section id="characters" className="character-list">
       <h2>Characters</h2>
-      <p className="subtitle">Select the character for more details!</p>
+      <p className="subtitle">See some character to see the details!</p>
       <span>
         {CharacterList.map((chars, id) => {
           return (

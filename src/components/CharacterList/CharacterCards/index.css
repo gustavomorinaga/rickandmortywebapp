@@ -19,10 +19,6 @@
 	box-shadow: 0px 0px 10px var(--color-blackMediumOpacity);
 
 	transition: all 0.3s;
-
-	cursor: pointer;
-
-	filter: brightness(0.9) grayscale(0.2);
 }
 
 .character-card:hover {
@@ -32,12 +28,11 @@
 	border-color: var(--color-lightBlue);
 	box-shadow: 0px 0px 10px var(--color-blue),
 		0px 0px 25px var(--color-blackMediumOpacity);
-
-	filter: brightness(1) grayscale(0);
 }
 
 .character-card .character-image-wrapper {
 	flex: 2 1 0%;
+	position: relative;
 
 	width: 100%;
 }
@@ -158,8 +153,24 @@
 	width: 10px;
 	height: 10px;
 
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
 	background: var(--color-grayMedium);
 	border-radius: 50%;
 
 	margin: 0 0.3rem 0;
+}
+
+.character-card .character-content-wrapper .life-status .dots div:last-child {
+	width: 20px;
+	height: 20px;
+
+	font: 700 1.6rem "Rajdhani";
+	color: var(--color-white);
+
+	padding: 1.6rem;
+
+	background: var(--color-gray);
 }

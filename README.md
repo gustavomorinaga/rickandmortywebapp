@@ -5,10 +5,10 @@
 - [x] Instalar Axios para consumo da API
 - [x] Visualização dos personagens
 - [x] Lidar com paginações
-- [ ] Ver detalhes dos personagens ao clicar
-- [ ] Localização de cada personagem
-- [ ] Gráfico de personagens por localização
-- [ ] Gráfico de separação de episódios por temporada
+- [x] Ver detalhes dos personagens
+- [x] Localização de cada personagem
+- [x] Gráfico de separação de episódios por temporada
+- [x] Gráfico de personagens por localização
 
 ### Links
 

@@ -1,0 +1,74 @@
+.character-details {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+
+	display: flex !important;
+	align-items: flex-start;
+	justify-content: flex-start;
+	flex-direction: column;
+
+	padding: 1.6rem;
+
+	opacity: 0;
+
+	background: var(--color-grayDark);
+
+	transition: opacity 0.3s;
+}
+
+.character-details::after {
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	height: 0%;
+  bottom: 0;
+  opacity: 0.5;
+	background: linear-gradient(
+		0deg,
+		var(--color-blue) 0%,
+		transparent 50%
+  );
+  transition: height 0.3s;
+}
+
+.character-card:hover .character-details::after {
+  height: 25%;
+}
+
+.character-details h3 {
+	font: 400 3.6rem 'Rajdhani';
+	text-align: center;
+	color: var(--color-yellow);
+  margin-bottom: 0.6rem;
+  border-bottom: 2px solid var(--color-yellow);
+}
+
+.character-details h3,
+.character-details .character-details-content li {
+	width: 100%;
+}
+
+.character-details .character-details-content {
+  list-style: square;
+
+  margin-top: 0.6rem;
+  margin-left: 1.6rem;
+}
+
+.character-details .character-details-content li {
+	font: 400 1.6rem 'Rajdhani';
+	text-transform: uppercase;
+	text-align: left;
+  color: var(--color-white);
+  margin-bottom: 0.6rem;
+}
+
+.active .character-details {
+	opacity: 1;
+}
