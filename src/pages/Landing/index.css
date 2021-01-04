@@ -151,4 +151,9 @@
 
 .graphics .characters-per-planets text {
 	font-size: 1.6rem !important;
+	color: var(--color-white) !important;
+	fill: var(--color-white) !important;
+}
+.graphics .characters-per-planets g {
+	opacity: 1 !important;
 }
